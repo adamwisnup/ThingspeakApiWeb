@@ -6,9 +6,27 @@
 .card {
   margin-top: 50%;
   background-color: aqua;
+  /* position: relative;
+  overflow: hidden; */
 }
 
 .card:hover {
   background-color: aquamarine;
   cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-body {
+  transform: translateY(-10%);
+  transition: transform 0.3s ease;
+}
+
+.card-body {
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
 }
